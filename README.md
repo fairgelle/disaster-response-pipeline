@@ -33,5 +33,12 @@ The code should using Python version 3.6 and above.
 
 Some of the labels in the original dataset are highly imbalanced; this affects the model's F1 score. For simplicity's purposes, these highly imbalanced fields are dropped in the process_data.py file. In the future, pre-processing methods to deal with imbalanced dataset for classification such as [MLSMOTE](https://medium.com/thecyphy/handling-data-imbalance-in-multi-label-classification-mlsmote-531155416b87) can be used.
 
+## About the Web App
+
+1. Input messages into the field. Click on 'Classify Message'. 
+![messages](https://github.com/fairgelle/disaster-response-pipeline/blob/master/assets/messages.png)
+2. Result of the message classification
+![classification](https://github.com/fairgelle/disaster-response-pipeline/blob/master/assets/messages.png)
+
 ## Licensing, Authors & Acknowledgements
 This project was completed as a part of Udacity Data Science Nanodegree. Credits to Figure Eight for providing the dataset.
