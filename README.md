@@ -37,6 +37,7 @@ Some of the labels in the original dataset are highly imbalanced; this affects t
 
 1. Input messages into the field. Click on 'Classify Message'. 
 ![messages](https://github.com/fairgelle/disaster-response-pipeline/blob/master/assets/messages.png)
+
 2. Result of the message classification
 ![classification](https://github.com/fairgelle/disaster-response-pipeline/blob/master/assets/messages.png)
 
