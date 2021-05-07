@@ -39,7 +39,7 @@ Some of the labels in the original dataset are highly imbalanced; this affects t
 ![messages](https://github.com/fairgelle/disaster-response-pipeline/blob/master/assets/messages.png)
 
 2. Result of the message classification
-![classification](https://github.com/fairgelle/disaster-response-pipeline/blob/master/assets/messages.png)
+![classification](https://github.com/fairgelle/disaster-response-pipeline/blob/master/assets/classification.png)
 
 ## Licensing, Authors & Acknowledgements
 This project was completed as a part of Udacity Data Science Nanodegree. Credits to Figure Eight for providing the dataset.
