@@ -13,7 +13,11 @@ Climate change has increased the number and severity of natural disasters all ov
 Disaster relief workers can use this app to input messages and it will return a classification of the message, such as "aid-related", "medical help", "water".
 With better identification of messages, we hope that emergency services could allocate resources or assistance more effectively.
 
+See the live dashboard (here)[http://disaster-response-lsndj.herokuapp.com/]
+
 ## Installation
+You can replicate this dashboard locally by following these instructions.
+
 The code should using Python version 3.6 and above. 
 
 1. Start by [cloning](https://github.com/git-guides/git-clone) the repository into your local machine
