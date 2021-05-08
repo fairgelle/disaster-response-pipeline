@@ -1,19 +1,25 @@
-# appending sys with the model directory to import tokenize func
-FILE_DIR = os.path.dirname(os.path.abspath(__file__))
-PARENT_DIR = os.path.join(FILE_DIR, os.pardir) 
-MODEL_DIR = os.path.join(PARENT_DIR, 'models')
-
-sys.path.append(MODEL_DIR)
-
 import json
 import plotly
 import pandas as pd
 import re
 import joblib
 
+import nltk 
 import sys
 import os
+nltk.download(['punkt', 'wordnet', 'averaged_perceptron_tagger', 'stopwords']) #delete
 
+# from nltk.tokenize import word_tokenize #delete
+# from nltk.stem import WordNetLemmatizer #delete
+# from nltk.corpus import stopwords #delete
+
+# testing
+FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.join(FILE_DIR, os.pardir) 
+MODEL_DIR = os.path.join(PARENT_DIR, 'models')
+
+sys.path.append(MODEL_DIR)
+#sys.path.append(os.path.relpath('../models'))
 from utils import tokenize
 
 from flask import Flask
@@ -26,11 +32,14 @@ app = Flask(__name__)
 
 
 # load data
+#engine = create_engine('sqlite:///../data/DisasterResponse.db')
 engine = create_engine('sqlite:///data/DisasterResponse.db')
 df = pd.read_sql_table('data/DisasterResponse.db', engine)
 
 # load model
 model = joblib.load("models/classifier.pkl")
+#model = joblib.load("../models/classifier.pkl")
+
 
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
@@ -38,6 +47,7 @@ model = joblib.load("models/classifier.pkl")
 def index():
     
     # extract data needed for visuals
+    # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
 
@@ -53,6 +63,7 @@ def index():
     class_labels = list(class_prop_1.index)
     
     # create visuals
+    # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
             'data': [
@@ -76,6 +87,7 @@ def index():
             }
         },
 
+        ####
         {
             'data': [
                 Bar(
@@ -85,6 +97,7 @@ def index():
                     marker = dict(
                       color = 'rgb(0, 105, 146)'
                     )
+                    #orientation = 'h'
                 ),
                 Bar(
                     x=class_labels,
@@ -93,6 +106,7 @@ def index():
                     marker = dict(
                       color = 'rgb(236, 164, 0)'
                     )
+                    #orientation = 'h'
                 )
             ],
 
@@ -103,6 +117,7 @@ def index():
                 },
                 'xaxis': {
                     'title': "Class",
+            #        'tickangle': -45
                 },
                 'barmode' : 'stack'
             }
