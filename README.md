@@ -4,10 +4,11 @@
 1. [Project Motivation](#project-motivation)
 2. [Installation](#installation)
 3. [About the Data](#about-the-data)
-4. [Licensing, Authors & Acknowledgements](#licensing-authors--acknowledgements)
+4. [About the Web App](#about-the-web-app)
+5. [Licensing, Authors & Acknowledgements](#licensing-authors--acknowledgements)
 
 ## Project Motivation
-Climate change has increased the number and severity of natural disasters all over the world. The shorter the response time of emergency services, the greater the number of lives that can be saved. This app is using a machine learning model that was trained on over 25,000 natural-disaster- related messages. 
+Climate change has increased the number and severity of natural disasters all over the world. The shorter the response time of emergency services, the greater the number of lives that can be saved. This app is using a machine learning model that was trained on over 25,000 natural disaster- related messages. 
 
 Disaster relief workers can use this app to input messages and it will return a classification of the message, such as "aid-related", "medical help", "water".
 With better identification of messages, we hope that emergency services could allocate resources or assistance more effectively.
