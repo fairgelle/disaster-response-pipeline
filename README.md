@@ -21,7 +21,7 @@ The code should using Python version 3.6 and above.
 4. Open http://0.0.0.0:3001/ on your browser to view the web app
 
 ## Code Overview
-- Dataset: disaster_messages.csv and disaster_categories.csv contains messages data and the corresponding classification of the messages
+- Dataset: disaster_messages.csv and disaster_categories.csv contain messages data and the corresponding classification of the messages
 - process_data.py: This script cleans up and merges the two dataset. The result is then saved into an SQLite DB. In this project, the DB is named as DisasterResponse DB. The whole process is executed by running `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
 - train_classifier.py: This script loads the data from the DisasterResponse.db and uses it as an input for the ML model. The fine-tuned model is then saved as a pickle file called classifier.pkl. This whole process is executed by running `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 - templates folder: Contains files used for the frontend part of the web app
