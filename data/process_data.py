@@ -62,6 +62,8 @@ def clean_data(df):
     
     df = df.drop(cols_to_exclude, axis=1).drop_duplicates()
     
+    df['related'] = df['related'].replace(2, 1)
+    
     return df
 
 
